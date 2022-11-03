@@ -1,0 +1,16 @@
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\bin\Debug\Cliente.exe.config
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\bin\Debug\Cliente.exe
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\bin\Debug\Cliente.pdb
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.csproj.SuggestedBindingRedirects.cache
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\MainWindow.g.cs
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\App.g.cs
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente_MarkupCompile.cache
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente_MarkupCompile.lref
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\MainWindow.baml
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.g.resources
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.Properties.Resources.resources
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.csproj.GenerateResource.cache
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.exe
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.pdb
+C:\Users\jeanc\Desktop\Socket\Cliente\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
