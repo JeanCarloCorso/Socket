@@ -18,8 +18,10 @@ namespace Cliente.LogicaCliente
                 IPEndPoint ipCliente = new IPEndPoint(IPAddress.Parse(ip), porta);
                 Socket socketCliente = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
+                byte[] mensagem = PreparaMsg(msg);
+
                 socketCliente.Connect(ipCliente);
-                socketCliente.Send(PreparaMsg(msg));
+                socketCliente.Send(mensagem, 0, mensagem.Length, 0);
                 socketCliente.Close();
 
             }catch(Exception ex)
@@ -32,7 +34,13 @@ namespace Cliente.LogicaCliente
 
         private static byte[] PreparaMsg(string msg)
         {
-            return Encoding.ASCII.GetBytes(msg);
+            byte[] mensagem = Encoding.UTF8.GetBytes(msg);
+            byte[] dadosEnvio = new byte[4 + mensagem.Length];
+            byte[] tamanhoMensagem = BitConverter.GetBytes(mensagem.Length);
+            tamanhoMensagem.CopyTo(dadosEnvio, 0);
+            mensagem.CopyTo(dadosEnvio, 4);
+
+            return dadosEnvio;
         }
     }
 }
