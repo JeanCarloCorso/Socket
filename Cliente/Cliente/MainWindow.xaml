@@ -8,12 +8,17 @@
         Title="MainWindow" Height="340" Width="314">
     <Grid Margin="0,0,0,-6" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Border BorderBrush="Black" BorderThickness="1" Margin="10,7,0,0" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" HorizontalAlignment="Left" Width="263" Height="279" VerticalAlignment="Top">
-            <TextBox x:Name="msg" HorizontalAlignment="Left" Height="79" Margin="30,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199"/>
+
         </Border>
-        <Label x:Name="label" Content="Endereço IP do servidor de destino" Margin="34,12,0,0" HorizontalAlignment="Left" Width="221" Height="33" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="ip" Margin="41,44,0,0" TextWrapping="Wrap" Text="TextBox" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="199"/>
-        <Label x:Name="label1" Content="Mensagem a ser enviada" Margin="41,80,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="199" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Ip:" HorizontalAlignment="Left" Height="28" Margin="42,46,0,0" VerticalAlignment="Top" Width="22"/>
+        <TextBox x:Name="ip" Margin="66,47,0,0" TextWrapping="Wrap" Text="192.168.0.1" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"/>
+
+        <Label x:Name="label" Content="Endereço do servidor de destino" Margin="42,12,0,0" HorizontalAlignment="Left" Width="199" Height="33" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Mensagem a ser enviada" Margin="42,85,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="198" FontWeight="Bold"/>
+        <TextBox x:Name="msg" HorizontalAlignment="Left" Height="79" Margin="41,113,0,0" TextWrapping="Wrap" Text="Olá Mundo!" VerticalAlignment="Top" Width="199"/>
         <Button x:Name="button" Content="ENVIAR" Margin="42,210,0,0" Background="#FF308A32" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="199" Height="34" VerticalAlignment="Top" Click="button_Click"/>
+        <Label x:Name="label_Porta" Content="Porta:" HorizontalAlignment="Left" Height="28" Margin="150,46,0,0" VerticalAlignment="Top" Width="40"/>
+        <TextBox x:Name="porta" Margin="190,48,0,0" TextWrapping="Wrap" Text="8080" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="38"/>
 
 
     </Grid>

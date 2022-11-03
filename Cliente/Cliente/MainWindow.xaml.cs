@@ -29,8 +29,19 @@ namespace Cliente
         {
             bool status = true;
             string erro = string.Empty;
+            try
+            {
+                int numeroPorta = int.Parse(porta.Text);
+            }
+            catch 
+            {
+                MessageBox.Show("A porta deve ser um numero!");
+                porta.Text = string.Empty;
+                return;
+            }
 
-            status = LogicaCliente.Cliente.EnviarMsg(msg.Text, ip.Text, 1234, out erro);
+
+            status = LogicaCliente.Cliente.EnviarMsg(msg.Text, ip.Text, int.Parse(porta.Text), out erro);
             
             if (status)
             {
