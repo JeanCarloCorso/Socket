@@ -20,16 +20,17 @@ namespace Servidor
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowVM vm;
         public MainWindow()
         {
-            InitializeComponent();
+            vm = new MainWindowVM();
+            DataContext = vm;
+            //InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
-            LogicaServidor.Servidor servidor = new LogicaServidor.Servidor();
-            logServidor.Text += "Iniciando servidor..." + Environment.NewLine;
-            logServidor.Text += servidor.mensagem + Environment.NewLine;
+            await vm.SubirServidor();
         }
     }
 }

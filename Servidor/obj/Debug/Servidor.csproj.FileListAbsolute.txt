@@ -13,3 +13,4 @@ C:\Users\jeanc\Desktop\Socket\Servidor\obj\Debug\Servidor.csproj.GenerateResourc
 C:\Users\jeanc\Desktop\Socket\Servidor\obj\Debug\Servidor.csproj.CoreCompileInputs.cache
 C:\Users\jeanc\Desktop\Socket\Servidor\obj\Debug\Servidor.exe
 C:\Users\jeanc\Desktop\Socket\Servidor\obj\Debug\Servidor.pdb
+C:\Users\jeanc\Desktop\Socket\Servidor\obj\Debug\Servidor.csproj.AssemblyReference.cache
