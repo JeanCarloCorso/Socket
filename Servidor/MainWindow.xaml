@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Servidor" d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="482" Width="407">
-    <Grid Background="White">
-        <Rectangle HorizontalAlignment="Left" Height="420" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="367" Fill="#FFB7B7B7"/>
+        ResizeMode="NoResize"
+        Title="Servidor" SizeToContent="WidthAndHeight">
+    <Grid Background="White" Height="563" Width="387">
+        <Rectangle Height="527" Margin="10,0,10,18" Stroke="Black" VerticalAlignment="Bottom" Fill="#FFB7B7B7"/>
 
-        <Ellipse HorizontalAlignment="Left" Height="28" Margin="111,387,0,0" Stroke="Black" VerticalAlignment="Top" Width="29" Fill="{Binding corStatusServidor}"/>
-        <Label x:Name="label" Content="Status Servidor" HorizontalAlignment="Left" Height="28" Margin="16,387,0,0" VerticalAlignment="Top" Width="105"/>
-        <Button x:Name="button" Content="{Binding textoBotaoServidor}" HorizontalAlignment="Left" Height="51" Margin="21,23,0,0" VerticalAlignment="Top" Width="345" Background="{Binding corBoaoServidor}" Foreground="White" FontWeight="Bold" FontSize="20" Click="button_Click"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="283" Margin="21,89,0,0" VerticalAlignment="Top" Width="345">
-            <TextBlock x:Name="logServidor" Height="276" TextWrapping="Wrap" Text="{Binding mensagesTelaServidor}" Width="322" Background="Black" Foreground="#FF34DC07"/>
+        <Ellipse HorizontalAlignment="Left" Height="28" Margin="111,497,0,0" Stroke="Black" VerticalAlignment="Top" Width="29" Fill="{Binding corStatusServidor}"/>
+        <Label x:Name="label" Content="Status Servidor" HorizontalAlignment="Left" Margin="16,0,0,38" Width="105" Height="28" VerticalAlignment="Bottom"/>
+        <Button x:Name="button" Content="{Binding textoBotaoServidor}" Margin="21,23,21,489" Background="{Binding corBoaoServidor}" Foreground="White" FontWeight="Bold" FontSize="20" Click="button_Click"/>
+        <ScrollViewer Margin="21,89,21,84">
+            <TextBlock x:Name="logServidor" Height="386" TextWrapping="Wrap" Text="{Binding mensagesTelaServidor}" Width="315" Background="Black" Foreground="#FF34DC07"/>
         </ScrollViewer>
 
     </Grid>

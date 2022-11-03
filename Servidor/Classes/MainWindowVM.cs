@@ -34,6 +34,7 @@ namespace Servidor
             {
                 if (await InicializaServidor())
                 {
+                    EscreverNaTela("Esperando conexões........");
                     do
                     {
                         await Ouvir();
@@ -55,10 +56,11 @@ namespace Servidor
                 IPEndPoint ipServidor = new IPEndPoint(dadosDeRede.AddressList[6], porta);
                 this.socketServidor = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
                 this.socketServidor.Bind(ipServidor);
-                EscreverNaTela("+-------------------------------------------------+");
+                EscreverNaTela("+------------------------------------------------------+");
                 EscreverNaTela("|  Servidor: " + dadosDeRede.HostName);
                 EscreverNaTela("|  IP: " + dadosDeRede.AddressList[6].ToString());
-                EscreverNaTela("+-------------------------------------------------+");
+                EscreverNaTela("|  Porta: " + porta);
+                EscreverNaTela("+------------------------------------------------------+");
 
                 MudaStatusServidor(true);
             }
@@ -75,8 +77,6 @@ namespace Servidor
         {
             try
             {
-                EscreverNaTela("Esperando conexões........");
-
                 socketServidor.Listen(100);
                 Socket clienteSock = null;
                 await Task.Run(() => { clienteSock = socketServidor.Accept(); });
@@ -126,7 +126,6 @@ namespace Servidor
         private void Dispose()
         {
             socketServidor.Close();
-            socketServidor.Dispose();
         }
     }
 }

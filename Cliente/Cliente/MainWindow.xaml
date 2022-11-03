@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cliente"
         mc:Ignorable="d"
-        Title="MainWindow" Height="340" Width="314">
-    <Grid Margin="0,0,0,-6" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        ResizeMode="NoResize"
+        Title="Cliente" SizeToContent="WidthAndHeight">
+
+    <Grid Margin="0,0,0,-6" Width="285" Height="310" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Border BorderBrush="Black" BorderThickness="1" Margin="10,7,0,0" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" HorizontalAlignment="Left" Width="263" Height="279" VerticalAlignment="Top">
 
         </Border>
