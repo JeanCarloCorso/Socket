@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cliente.LogicaCliente;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace Cliente
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowsVM vm;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,9 +31,10 @@ namespace Cliente
         {
             bool status = true;
             string erro = string.Empty;
+            int numeroPorta;
             try
             {
-                int numeroPorta = int.Parse(porta.Text);
+                numeroPorta = int.Parse(porta.Text);
             }
             catch 
             {
@@ -40,18 +43,25 @@ namespace Cliente
                 return;
             }
 
-
-            status = LogicaCliente.Cliente.EnviarMsg(msg.Text, ip.Text, int.Parse(porta.Text), out erro);
+            status = vm.EnviarMsg(msg.Text, ip.Text, numeroPorta, out erro);
             
             if (status)
             {
-                MessageBox.Show("Mensagem enviada com sucesso!");
+                msg.Text = string.Empty;
             }
             else
             {
                 MessageBox.Show("Houve um erro durante o envio!" + Environment.NewLine + erro);
             }
             
+        }
+
+        private void Entrar_Click(object sender, RoutedEventArgs e)
+        {
+            vm = new MainWindowsVM(usuario.Text);
+            DataContext = vm;
+            vm.telaUsuario = "Collapsed";
+            vm.Notifica("telaUsuario");
         }
     }
 }

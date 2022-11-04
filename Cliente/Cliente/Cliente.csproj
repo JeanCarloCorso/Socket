@@ -78,7 +78,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LogicaCliente\Cliente.cs" />
+    <Compile Include="Classes\BaseNotify.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\MainWindowsVM.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
